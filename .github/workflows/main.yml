@@ -1,24 +1,16 @@
-name: Node.js CI
-
 on: [push]
 
 jobs:
-  build:
-
+  isPrime:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
+    name: A job to check isPrime
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run build --if-present
-    - run: npm test
-      env:
-        CI: true
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: isPrime action step
+        uses: ./ # Uses an action in the root directory
+        with:
+          who-to-greet: 'Mohith Sekharamantri'
+      # Use the output from the `hello` step
+      - name: Get the testCases
+        run: isPrime.js
