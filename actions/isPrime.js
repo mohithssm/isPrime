@@ -18,5 +18,7 @@ function isPrime(n) {
 }
 
 var assert = require("assert")
-console.assert(isPrime(5), "test case passed for number 5")
-
+assert(isPrime(5), "test case passed for number 5")
+assert(isPrime(7), "test case passed for number 7")
+assert(isPrime(11), "test case passed for number 11")
+console.log("all testcases passed")
