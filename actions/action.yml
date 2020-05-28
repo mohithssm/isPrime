@@ -1,14 +1,4 @@
- name: 'isPrime'
-description: 'Greet someone and record the time'
-inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'isPrime'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+name: 'isPrime'
 runs:
   using: 'node12'
   main: 'isPrime.js'
-  run: 'isPrime.js'

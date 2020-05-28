@@ -11,4 +11,4 @@ jobs:
         uses: ./actions # Uses an action in the root directory
         with:
           who-to-greet: 'Mohith Sekharamantri'
-      - name: Get the testCases
+      - name: isPrime
